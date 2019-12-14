@@ -19,7 +19,7 @@ class UsersController < ApplicationController
       image_name: "default_user.jpg", password: params[:password])
     if @user.save
       session[:user_id] = @user.id
-      flash[:notice] = "ユーザー登録が完了しました"
+      flash[:notice] = "ユーザー登録が完了しました."
       redirect_to("/users/#{@user.id}")
     else
     render("users/new")
